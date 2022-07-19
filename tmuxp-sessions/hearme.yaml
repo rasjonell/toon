@@ -1,0 +1,42 @@
+session_name: hearme
+start_directory: $HOME/Projects/hearme
+
+windows:
+  - window_name: servers
+    layout: de57,238x60,0,0{85x60,0,0,1,152x60,86,0[152x21,86,0,2,152x14,86,22,3,152x23,86,37,4]}
+    startup_pane: 0
+    panes:
+      - vim .
+
+      - shell_command:
+        - cd hearme-platform
+        - npm run start:dev
+
+      - shell_command:
+        - cd hearme-enterprise-web
+        - yarn run dev -- --port 4000
+
+      - shell_command:
+        - cd hearme-app
+        - yarn start
+
+  - window_name: platform
+    layout: tiled
+    panes:
+      - shell_command:
+        - cd hearme-platform
+        - vim .
+
+  - window_name: web
+    layout: tiled
+    panes:
+      - shell_command:
+        - cd hearme-enterprise-web
+        - vim .
+
+  - window_name: mobile
+    layout: tiled
+    panes:
+      - shell_command:
+        - cd hearme-app
+        - vim .
