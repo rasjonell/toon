@@ -25,18 +25,18 @@ windows:
     panes:
       - shell_command:
         - cd hearme-platform
-        - vim .
+        - lg
 
   - window_name: web
     layout: tiled
     panes:
       - shell_command:
         - cd hearme-enterprise-web
-        - vim .
+        - lg
 
   - window_name: mobile
     layout: tiled
     panes:
       - shell_command:
         - cd hearme-app
-        - vim .
+        - lg
