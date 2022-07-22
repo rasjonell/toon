@@ -21,6 +21,7 @@ call plug#begin()
 
     " Git Stuff
     Plug 'airblade/vim-gitgutter'
+    Plug 'f-person/git-blame.nvim'
 
     " Appearance
     Plug 'morhetz/gruvbox'
@@ -28,12 +29,13 @@ call plug#begin()
     Plug 'vim-airline/vim-airline'
     Plug 'mhartington/oceanic-next'
     Plug 'Yggdroot/indentLine'
+    Plug 'ayu-theme/ayu-vim'
+    Plug 'zivyangll/git-blame.vim' 
     Plug 'ryanoasis/vim-devicons'
 
 call plug#end()
 
 " Options
-set background=dark
 set clipboard=unnamedplus
 set completeopt=noinsert,menuone,noselect
 set cursorline
@@ -51,6 +53,7 @@ set nohlsearch
 set ignorecase
 set smartcase
 set scrolloff=999
+set backspace=indent,eol,start
 
 " Tabs size
 set expandtab
@@ -65,23 +68,21 @@ set t_Co=256
 " True color if available
 let term_program=$TERM_PROGRAM
 
-" Check for confilcts with Apple Terminal app
-if term_program !=? 'Apple_Terminal'
-    set termguicolors
-else
-    if $TERM !=? 'xterm-256color'
-        set termguicolors
-    endif
-endif
-
 " Italics
 let &t_ZH="\e[3m"
 let &t_ZR="\e[2em"
 
 " Appearance
-colorscheme OceanicNext
+set termguicolors
+let ayucolor="dark"   " for dark version of theme
+colorscheme ayu
 
 " Plugin Setup
+
+" Sessions Stuff
+let g:session_autosave = 'yes'
+let g:session_autoload = 'yes'
+let g:session_default_to_last = 1
 
 " Indent Line Stuff
 let g:indentLine_char = '┆'
@@ -128,9 +129,13 @@ let g:prettier#autoformat_require_pragma = 0
 au BufWritePre *.css,*.svelte,*.scss,*.html,*.ts,*.js,*.json,*.jsx,*.tsx PrettierAsync
 
 " Shortcuts
+let mapleader='z'
+let maplocalleader='\'
+
+nnoremap <leader>oc :GitBlameOpenCommitURL<CR>
 
 nnoremap <C-q> :q!<CR>
-nnoremap <C-w> :wq<Cr>
+nnoremap <C-w> :wq<CR>
 nnoremap <C-b> :NERDTreeToggle<CR>
 
 nnoremap <C-Tab> gt
