@@ -14,7 +14,11 @@ windows:
 
       - shell_command:
         - cd hearme-enterprise-web
-        - yarn run dev -- --port 4000
+        - npm run dev -- --port 4000
+
+      - shell_command:
+        - cd enterprise-admin
+        - npm run dev -- --port 4001
 
       - shell_command:
         - cd hearme-app
