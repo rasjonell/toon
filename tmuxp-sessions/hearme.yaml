@@ -2,11 +2,11 @@ session_name: hearme
 start_directory: $HOME/Projects/hearme
 
 windows:
-  - window_name: servers
+  - window_name: Server Dashboard
     layout: 1602,238x60,0,0{166x60,0,0,1,71x60,167,0[71x21,167,0,2,71x14,167,22,3,71x23,167,37,4]}
     startup_pane: 0
     panes:
-      - vim .
+      - neofetch
 
       - shell_command:
         - cd hearme-platform
@@ -20,21 +20,29 @@ windows:
         - cd hearme-app
         - yarn start
 
-  - window_name: platform
+  - window_name: Backend Platform
     layout: tiled
     panes:
       - shell_command:
         - cd hearme-platform
         - lg
 
-  - window_name: web
+  - window_name: Listener Web App
     layout: tiled
     panes:
       - shell_command:
         - cd hearme-enterprise-web
         - lg
 
-  - window_name: mobile
+  - window_name: Admin Dashboard
+    layout: tiled
+    panes:
+      - shell_command:
+        - cd enterprise-admin
+        - lg
+
+
+  - window_name: Mobile App
     layout: tiled
     panes:
       - shell_command:
