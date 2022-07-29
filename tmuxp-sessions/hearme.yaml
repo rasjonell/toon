@@ -3,7 +3,7 @@ start_directory: $HOME/Projects/hearme
 
 windows:
   - window_name: Server Dashboard
-    layout: 1602,238x60,0,0{166x60,0,0,1,71x60,167,0[71x21,167,0,2,71x14,167,22,3,71x23,167,37,4]}
+    layout: tiled
     startup_pane: 0
     panes:
       - neofetch

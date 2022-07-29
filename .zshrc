@@ -12,7 +12,6 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 
-
 alias vim="nvim"
 alias lg="lazygit"
 alias cb="git checkout"
