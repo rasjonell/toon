@@ -3,11 +3,9 @@ start_directory: $HOME/Projects/hearme
 
 windows:
   - window_name: Server Dashboard
-    layout: tiled
+    layout: 8bee,214x54,0,0{120x54,0,0,2,93x54,121,0[93x17,121,0,3,93x17,121,18,4,93x18,121,36,5]}
     startup_pane: 0
     panes:
-      - neofetch
-
       - shell_command:
         - cd hearme-platform
         - npm run start:dev
