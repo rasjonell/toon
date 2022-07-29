@@ -7,8 +7,7 @@ shell
 
 ### [fisher](https://github.com/jorgebucaran/fisher)
 
-Fisher is a plugin manager for Fish
-I've uploaded my plugins at `.fish_plugins`
+Fisher is a plugin manager for Fish. I've uploaded my plugins at `.fish_plugins`
 
 To install the plugins run:
 
