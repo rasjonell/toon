@@ -1,7 +1,6 @@
 set EDITOR nvim
-set theme_color_scheme gruvbox
-
 set -x DISABLE_AUTO_TITLE true
+set fish_greeting
 
 alias vim="nvim"
 alias lg="lazygit"
