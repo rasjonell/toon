@@ -4,6 +4,8 @@ set fish_greeting
 
 fish_add_path /opt/homebrew/bin
 fish_add_path $HOME/.nvm/versions/node/v16.16.0/bin
+fish_add_path /opt/local/bin
+fish_add_path /Applications/Postgres.app/Contents/Versions/latest/bin
 
 alias vim="nvim"
 alias lg="lazygit"
