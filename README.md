@@ -15,6 +15,16 @@ To install the plugins run:
 for plugin in (cat .fish_plugins); fisher install $plugin; end
 ```
 
+## Brew
+
+I've uploaded my brew packages list at `.brew_packages`
+
+To install the packages run:
+
+```fisher
+for package in (cat .brew_packages); brew install $package; end
+```
+
 ## [tmuxp](https://tmuxp.readthedocs.io/en/latest/)
 
 Tmuxp is a Tmux session manager. you can specify your window/pane arangement with a config file and it will start your session as specified.
