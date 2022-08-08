@@ -1,0 +1,30 @@
+session_name: xlib
+start_directory: $HOME/Projects/x-library
+
+windows:
+  - window_name: Dashboard
+    layout: 9d1f,214x54,0,0{106x54,0,0,1,107x54,107,0,2}
+    startup_pane: 0
+    panes:
+      - shell_command:
+        - cd platform
+        - mix phx.server
+
+      - shell_command:
+        - cd mobile
+        - yarn start
+
+  - window_name: Backend Platform
+    layout: tiled
+    panes:
+      - shell_command:
+        - cd platform
+        - lg
+
+  - window_name: Mobile
+    layout: tiled
+    panes:
+      - shell_command:
+        - cd mobile
+        - lg
+
