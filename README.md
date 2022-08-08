@@ -21,7 +21,7 @@ I've uploaded my brew packages list at `.brew_packages`
 
 To install the packages run:
 
-```fisher
+```fish
 for package in (cat .brew_packages); brew install $package; end
 ```
 
