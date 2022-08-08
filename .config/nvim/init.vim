@@ -19,6 +19,7 @@ call plug#begin()
     Plug 'evanleck/vim-svelte'
     Plug 'prettier/vim-prettier', {'do': 'npm install'}
     Plug 'elixir-editors/vim-elixir'
+    Plug 'elixir-lsp/coc-elixir', {'do': 'yarn install && yarn prepack'}
 
     " Git Stuff
     Plug 'lewis6991/gitsigns.nvim'

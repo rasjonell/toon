@@ -11,6 +11,7 @@ alias vim="nvim"
 alias lg="lazygit"
 alias cb="git checkout"
 alias hearme="tmuxp load $HOME/tmuxp-sessions/hearme.yaml"
+alias xlib="tmuxp load $HOME/tmuxp-sessions/xlib.yaml"
 alias config="/opt/homebrew/bin/git --git-dir=$HOME/.cfg --work-tree=$HOME"
 
 fish_vi_key_bindings
