@@ -21,6 +21,13 @@ windows:
         - cd platform
         - lg
 
+  - window_name: OTP Pub
+    layout: tiled
+    panes:
+      - shell_command:
+        cd otpub
+        lg
+
   - window_name: Mobile
     layout: tiled
     panes:
