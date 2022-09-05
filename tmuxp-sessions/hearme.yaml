@@ -50,3 +50,10 @@ windows:
       - shell_command:
         - cd hearme-app
         - lg
+
+  - window_name: NewRelic Plugin
+    layout: tiled
+    panes:
+      - shell_command:
+        - cd newrelic-node-apollo-server-plugin
+        - lg
