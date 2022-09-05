@@ -25,8 +25,8 @@ windows:
     layout: tiled
     panes:
       - shell_command:
-        cd otpub
-        lg
+        - cd otpub
+        - lg
 
   - window_name: Mobile
     layout: tiled
