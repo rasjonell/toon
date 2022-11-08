@@ -1,0 +1,35 @@
+session_name: radio
+start_directory: $HOME/Projects/as-radio
+
+windows:
+  - window_name: Dashboard
+    layout: even-horizontal
+    startup_pane: 0
+    panes:
+      - shell_command:
+        - cd radio-server
+        - npm start
+
+      - shell_command:
+        - cd radio
+        - npm start
+
+  - window_name: Server
+    layout: tiled
+    panes:
+      - shell_command:
+        - cd radio-server
+        - lg
+
+  - window_name: Mobile
+    layout: tiled
+    panes:
+      - shell_command:
+        - cd radio
+        - lg
+
+  - window_name: Project
+    layout: tiled
+    panes:
+      - lg
+

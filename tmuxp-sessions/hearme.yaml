@@ -20,7 +20,7 @@ windows:
 
       - shell_command:
         - cd hearme-app
-        - yarn start
+        - npm start
 
   - window_name: Backend Platform
     layout: tiled
@@ -51,9 +51,9 @@ windows:
         - cd hearme-app
         - lg
 
-  - window_name: NewRelic Plugin
+  - window_name: postgraphile
     layout: tiled
     panes:
       - shell_command:
-        - cd newrelic-node-apollo-server-plugin
-        - lg
+        - cd chats
+        - postgraphile -c "postgres://postgres:postgres@localhost:5432/hearme-platform-dev" -s public --watch --append-plugins @graphile-contrib/pg-simplify-inflector,@graphile/subscriptions-lds --live --port 8888
