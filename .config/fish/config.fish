@@ -17,14 +17,16 @@ set -gx PATH $ANDROID_HOME/emulator $PATH
 set --export JAVA_HOME /Applications/Android\ Studio.app/Contents/jre/Contents/Home;
 set --export AWS_PROFILE hearme
 set -gx PATH $JAVA_HOME/bin $PATH;
+set -gx PATH $HOME/.cargo/bin $PATH;
 
 set -gx SDKROOT /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk
 
 alias vim="nvim"
 alias lg="lazygit"
 alias cb="git checkout"
-alias hearme="tmuxp load $HOME/tmuxp-sessions/hearme.yaml"
 alias xlib="tmuxp load $HOME/tmuxp-sessions/xlib.yaml"
+alias hearme="tmuxp load $HOME/tmuxp-sessions/hearme.yaml"
+alias radio="tmuxp load $HOME/tmuxp-sessions/as-radio.yaml"
 alias config="/opt/homebrew/bin/git --git-dir=$HOME/.cfg --work-tree=$HOME"
 
 fish_vi_key_bindings
