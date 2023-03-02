@@ -6,6 +6,7 @@ fish_add_path /opt/homebrew/bin
 fish_add_path $HOME/.nvm/versions/node/v16.16.0/bin
 fish_add_path /opt/local/bin
 fish_add_path /Applications/Postgres.app/Contents/Versions/latest/bin
+fish_add_path $HOME/.local/bin
 
 set --export ANDROID $HOME/Library/Android;
 set --export ANDROID_HOME $ANDROID/sdk;
@@ -20,11 +21,12 @@ set -gx PATH $HOME/.cargo/bin $PATH;
 
 set -gx SDKROOT /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk
 
-alias vim="nvim"
+alias vim="lvim"
 alias lg="lazygit"
 alias cb="git checkout"
 alias xlib="tmuxp load $HOME/tmuxp-sessions/xlib.yaml"
 alias radio="tmuxp load $HOME/tmuxp-sessions/as-radio.yaml"
+alias matchify="tmuxp load $HOME/tmuxp-sessions/matchify.yaml"
 alias config="/opt/homebrew/bin/git --git-dir=$HOME/.cfg --work-tree=$HOME"
 
 fish_vi_key_bindings
