@@ -1,5 +1,5 @@
 npm init --yes
-npm i typescript --save-dev
+npm i --save-dev typescript nodemon
 npx tsc --init
 
 echo '{
@@ -8,7 +8,8 @@ echo '{
   "scripts": {
     "build": "tsc",
     "prestart": "npm run build",
-    "start": "node dist/entry.js"
+    "start": "node dist/entry.js",
+    "watch": "nodemon --watch \"src/**\" --ext \"ts,json\" --exec \"npm start\""
   }
 }' > temp_package.json
 
@@ -18,8 +19,10 @@ rm temp_package.json
 mkdir src
 
 echo "function test(a: number, b: number): void {
-  console.log(a + b)
-}" > src/entry.ts
+  console.log(a + b);
+}
+
+test(60, 9);" > src/entry.ts
 
 
 echo '{
