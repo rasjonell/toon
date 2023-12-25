@@ -12,10 +12,8 @@ lvim.keys.normal_mode["<S-h>"] = ":BufferLineCyclePrev<CR>"
 -- Plugin Setup
 
 lvim.plugins = {
+  "catppuccin/nvim",
   "ur4ltz/surround.nvim",
-  "folke/tokyonight.nvim",
-  "yardnsm/vim-import-cost",
-  "ellisonleao/gruvbox.nvim",
 }
 
 local linters = require("lvim.lsp.null-ls.linters")
@@ -37,27 +35,17 @@ require("surround").setup({
   mapping_style = "sandwich"
 })
 
-require("tokyonight").setup({
-  style = "night",
-  light_style = "day",
-  transparent = true,
-  dim_inactive = true,
-  day_brightness = 0.3,
-  lualine_bold = false,
-  terminal_colors = true,
-  sidebars = { "qf", "help" },
-  hide_inactive_statusline = false,
-  styles = {
-    functions = {},
-    variables = {},
-    floats = "dark",
-    sidebars = "transparent",
-    comments = { italic = true },
-    keywords = { italic = true },
-  },
+require("catppuccin").setup({
+  transparent_background = true,
+  flavour = "frappe", -- latte, frappe, macchiato, mocha
+  integrations = {
+    dashboard = true,
+    which_key = true,
+  }
 })
 
-lvim.colorscheme = "tokyonight"
+-- setup must be called before loading
+lvim.colorscheme = "catppuccin"
 
 -- Plugin Configs
 
@@ -90,13 +78,3 @@ lvim.builtin.treesitter.ensure_installed = {
 lvim.builtin.telescope.defaults.dynamic_preview_title = true
 lvim.builtin.telescope.defaults.sorting_strategy = "ascending"
 lvim.builtin.telescope.defaults.selection_strategy = "closest"
-lvim.builtin.telescope.default.vimgrep_arguments = {
-  "rg",
-  "--column",
-  "--no-heading",
-  "--smart-case",
-  "--color=never",
-  "--line-number",
-  "--sort=modified",
-  "--with-filename",
-}
