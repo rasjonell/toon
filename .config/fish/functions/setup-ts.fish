@@ -1,5 +1,5 @@
 npm init --yes
-npm i --save-dev typescript nodemon
+npm i --save-dev typescript nodemon @types/node
 npx tsc --init
 
 echo '{
