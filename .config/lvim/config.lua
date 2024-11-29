@@ -1,7 +1,8 @@
 vim.log.level = "warn"
 vim.wo.relativenumber = true
+
 lvim.format_on_save.enabled = true
-lvim.format_on_save.timeout = 5000
+lvim.format_on_save.timeout = 2000
 
 local formatters = require "lvim.lsp.null-ls.formatters"
 formatters.setup {
@@ -11,36 +12,86 @@ formatters.setup {
   }
 }
 
+
 local linters = require "lvim.lsp.null-ls.linters"
 linters.setup {
+  {
+    command = "revive",
+    filetypes = { "go" }
+  },
   {
     command = "eslint",
     filetypes = { "typescript", "typescriptreact" }
   },
-  {
-    command = "revive",
-    filetypes = { "go" }
-  }
 }
 
 lvim.plugins = {
-  "tiagovla/tokyodark.nvim",
-  "xiyaowong/transparent.nvim",
-  { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
+  "folke/tokyonight.nvim",
+  {
+    "yetone/avante.nvim",
+    lazy = false,
+    version = false,
+    event = "VeryLazy",
+    opts = {
+      provider = "ollama",
+      auto_suggestions_provider = "ollama",
+
+      vendors = {
+        ollama = {
+          api_key_name = "",
+          model = "mistral",
+          __inherited_from = "openai",
+          endpoint = "http://127.0.0.1:11434/v1",
+        },
+      },
+
+      suggestion = {
+        next = "<M-]>",
+        prev = "<M-[>",
+        accept = "<M-h>",
+        dismiss = "<C-]>",
+      },
+    },
+    build = "make",
+    dependencies = {
+      "stevearc/dressing.nvim",
+      "nvim-lua/plenary.nvim",
+      "MunifTanjim/nui.nvim",
+      "hrsh7th/nvim-cmp",
+      "nvim-tree/nvim-web-devicons",
+      "zbirenbaum/copilot.lua",
+      {
+        "HakonHarnes/img-clip.nvim",
+        event = "VeryLazy",
+        opts = {
+          default = {
+            prompt_for_file_name = false,
+            embed_image_as_base64 = false,
+            drag_and_drop = {
+              insert_mode = true,
+            },
+            use_absolute_path = true,
+          },
+        },
+      },
+      {
+        'MeanderingProgrammer/render-markdown.nvim',
+        opts = {
+          file_types = { "markdown", "Avante" },
+        },
+        ft = { "markdown", "Avante" },
+      },
+    },
+  }
 }
 
 
-lvim.colorscheme = "catppuccin-mocha"
-
-vim.g.tokyodark_color_gamma = "1.0"
-vim.g.tokyodark_enable_italic = true
-vim.g.tokyodark_enable_italic_comment = true
-vim.g.tokyodark_transparent_background = true
+lvim.colorscheme = "tokyonight"
 
 lvim.meta = "ctrl"
 lvim.leader = "space"
 
-lvim.keys.normal_mode["<C-s>"] = ":w<cr>"
+lvim.keys.normal_mode["<C-s>"] = ":w<CR>"
 lvim.keys.normal_mode["<S-l>"] = ":BufferLineCycleNext<CR>"
 lvim.keys.normal_mode["<S-h>"] = ":BufferLineCyclePrev<CR>"
 
@@ -55,6 +106,7 @@ lvim.builtin.bufferline.active = true
 lvim.builtin.treesitter.ignore_install = { "haskell", "vimdoc" }
 lvim.builtin.treesitter.highlight.enable = true
 lvim.builtin.treesitter.ensure_installed = {
+  "go",
   "lua",
   "tsx",
   "css",
@@ -66,17 +118,13 @@ lvim.builtin.treesitter.ensure_installed = {
   "typescript",
 }
 
-require("transparent").setup({ -- Optional, you don't have to run setup.
-  groups = {                   -- table: default groups
-    'Normal', 'NormalNC', 'Comment', 'Constant', 'Special', 'Identifier',
-    'Statement', 'PreProc', 'Type', 'Underlined', 'Todo', 'String', 'Function',
-    'Conditional', 'Repeat', 'Operator', 'Structure', 'LineNr', 'NonText',
-    'SignColumn', 'CursorLine', 'CursorLineNr', 'StatusLine', 'StatusLineNC',
-    'EndOfBuffer',
+require("tokyonight").setup({
+  style = "moon",
+  transparent = true,
+  styles = {
+    floats = "transparent",
+    sidebars = "transparent",
   },
-  extra_groups = {
-    "NormalFloat",
-    "NvimTreeNormal",
-  },                   -- table: additional groups that should be cleared
-  exclude_groups = {}, -- table: groups you don't want to clear
 })
+
+vim.cmd [[colorscheme tokyonight]]
