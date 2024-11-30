@@ -1,0 +1,22 @@
+# /home/rasjonell/.config/tmuxinator/blog.yml
+
+name: blog
+root: ~/Projects/realtime-retro
+
+pre_window: nvm use 20
+
+startup_window: dashboard
+
+attach: true
+
+windows:
+  - dashboard:
+      layout: a4af,138x55,0,0{69x55,0,0,1,68x55,70,0,7}
+      panes:
+        - npx partykit dev src/lib/partykit/index.server.ts
+        - npm run dev -- --open
+
+  - editor:
+      layout: c545,138x55,0,0,8
+      panes:
+        - lvim
