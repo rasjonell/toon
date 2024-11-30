@@ -1,0 +1,6 @@
+# Set Catpuccin Colors
+set recolor-darkcolor "#F5E0DC"
+set recolor-lightcolor "#1E1E2E"
+
+# Zoom Settings
+set zoom-step 5

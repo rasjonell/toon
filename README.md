@@ -34,7 +34,7 @@ To install the plugins run:
 for plugin in (cat .fish_plugins); fisher install $plugin; end
 ```
 
-## Brew
+## [Homebrew](https://brew.sh/)
 
 I've uploaded my brew packages list at `.brew_packages`
 
@@ -50,3 +50,7 @@ Tmuxp is a [Tmux](https://github.com/tmux/tmux/wiki) session manager. you can sp
 Checkout my session configs at `tmuxp-sessions/`
 
 > **_NOTE:_** recently I moved to tmuxinator(check out `./.config/tmuxinator`)
+
+## [zathura](https://github.com/pwmt/zathura)
+
+The greatest document viewer 
