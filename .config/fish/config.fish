@@ -27,10 +27,13 @@ set -gx COINMARKETCAP_API_KEY 683bc384-5951-43dc-8858-27356ade148d
 
 set -gx GBM_BACKEND nvidia-drm
 set -gx __GLX_VENDOR_LIBRARY_NAME nvidia
-set -gx LIBVA_DRIVER_NAME nvidia
 set -gx __GL_SYNC_DISPLAY_DEVICE DP-1
 set -gx __GL_VRR_ALLOWED 1
 set -gx __GL_SYNC_TO_VBLANK 1
+set -gx XDG_CURRENT_DESKTOP Hyprland
+set -gx XDG_SESSION_TYPE wayland
+set -gx NO_AT_BRIDGE 1
+set -gx XAUTHORITY $XDG_RUNTIME_DIR/Xauthority
 
 
 set -gx tide_elixir_icon 🧪
