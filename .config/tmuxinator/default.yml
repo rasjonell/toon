@@ -1,0 +1,19 @@
+# /home/rasjonell/.config/tmuxinator/default.yml
+
+name: default
+root: ~/
+
+windows:
+  - window1:
+      pre:
+        - cd ~/Projects
+      layout: main-vertical
+      panes:
+        - lvim .
+
+  - window2:
+      pre:
+        - cd ~/Projects
+      layout: main-vertical
+      panes:
+        - lvim .
