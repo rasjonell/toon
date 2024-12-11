@@ -2,6 +2,8 @@
 "query:News:tags # \"news\" and age < 30"
 "query:Blogs:tags # \"blog\" and age < 30"
 "query:YouTube:tags # \"youtube\" and age < 30"
+"query:Non-Tech:tags # \"notech\" and age < 30"
+"query:Հայերեն:tags # \"hy\" and age < 30"
 
 ---News---
 
@@ -10,24 +12,68 @@ https://techcrunch.com/feed news
 
 ---Blogs---
 
-https://թութ.հայ/@norayr.rss blog
+https://թութ.հայ/@norayr.rss blog hy
+https://blog.syuneci.am/feed blog hy
 https://hachyderm.io/@evanw.rss blog
-https://xn--y9aai3au2bc2f.xn--y9a3aq/feed/rss2 blog
-https://sapiens.am/feed/ blog
+https://xn--y9aai3au2bc2f.xn--y9a3aq/feed/rss2 blog hy
+https://sapiens.am/feed/ blog hy
 https://neustadt.fr/rss.xml blog
 https://martinfowler.com/feed.atom blog
 https://antranigv.am/weblog_en/index.xml blog
 https://dev.to/feed blog
 https://increment.com/feed.xml blog
 https://web3isgoinggreat.com/feed.xml blog
-https://www.theredhandfiles.com/feed blog
 https://fishbowl.pastiche.org/atom.xml blog
 https://rubenerd.com/feed blog
 https://ploum.net/atom_en.xml blog
+http://programmingisterrible.com/rss blog
+https://overreacted.io/rss.xml blog
+http://www.tedinski.com/feed.xml blog
+http://lambda-the-ultimate.org/rss.xml blog
+
+---Non-Tech---
+
+https://kieranhealy.org/index.xml notech
+http://reallifemag.com/feed/ notech
+https://medium.com/feed/@saranormous notech
+http://reactionwheel.net/feed notech
+http://coreyrobin.com/feed/ notech
+http://www.aaronsw.com/2002/feeds/pgessays.rss notech
+http://meteuphoric.wordpress.com/feed/ notech
+http://www.idlewords.com/index.xml notech
+http://status451.com/feed/ notech
+http://feeds.feedburner.com/CliveHamilton notech
+https://medium.com/feed/@bruces notech
+http://feeds.kottke.org/main notech
+http://slatestarcodex.com/feed/ notech
+http://thefrailestthing.com/feed/ notech
+http://fasttransients.wordpress.com/feed/ notech
+http://www.ribbonfarm.com/feed/ notech
+http://atossaaraxia.com/feed.xml notech
+http://feeds.feedburner.com/GiffConstable notech
+http://abandonedfootnotes.blogspot.com/feeds/posts/default notech
+http://doriantaylor.com/f07f5044-01bc-472d-9079-9b07771b731c notech
+http://waitbutwhy.com/feed notech
+https://www.aclu.org/taxonomy/channel-term/5/feed notech
+http://www.roughtype.com/?feed=rss2 notech
+http://www.bldgblog.com/feed/ notech
+http://www.scottaaronson.com/blog/?feed=rss2 notech
+https://samkriss.com/feed/ notech
+http://feeds.feedburner.com/typepad/krisdedecker/lowtechmagazineenglish notech
+http://chuckspinney.blogspot.com/feeds/posts/default notech
+http://feeds.feedburner.com/arabistdotnet notech
+http://tedium.co/rss/ notech
+http://www.mondaynote.com/feed/ notech
+http://www.markboulton.co.uk/journal/feed notech
+http://blog.stephenwolfram.com/feed/ notech
+http://aworkinglibrary.com/feed/index.xml notech
+http://hub.jhu.edu/magazine/feed notech
+http://itself.wordpress.com/feed/ notech
 
 ---Videos---
 
 https://www.youtube.com/feeds/videos.xml?channel_id=UCUyeluBRhGPCW4rPe_UvBZQ youtube
 https://www.youtube.com/feeds/videos.xml?channel_id=UCd3dNckv1Za2coSaHGHl5aA youtube
 https://www.youtube.com/feeds/videos.xml?channel_id=UC9-y-6csu5WGm29I7JiwpnA youtube
+https://www.youtube.com/feeds/videos.xml?channel_id=UCRrEtoEV1qKbmhL3JHabWSQ youtube
 
