@@ -1,0 +1,32 @@
+---Aggregates---
+"query:News:tags # \"news\" and age < 30"
+"query:Blogs:tags # \"blog\" and age < 30"
+"query:YouTube:tags # \"youtube\" and age < 30"
+
+---News---
+
+https://hnrss.org/frontpage news
+https://techcrunch.com/feed news
+
+---Blogs---
+
+https://թութ.հայ/@norayr.rss blog
+https://hachyderm.io/@evanw.rss blog
+https://xn--y9aai3au2bc2f.xn--y9a3aq/feed/rss2 blog
+https://sapiens.am/feed/ blog
+https://neustadt.fr/rss.xml blog
+https://martinfowler.com/feed.atom blog
+https://antranigv.am/weblog_en/index.xml blog
+https://dev.to/feed blog
+https://increment.com/feed.xml blog
+https://web3isgoinggreat.com/feed.xml blog
+https://www.theredhandfiles.com/feed blog
+https://fishbowl.pastiche.org/atom.xml blog
+https://rubenerd.com/feed blog
+
+---Videos---
+
+https://www.youtube.com/feeds/videos.xml?channel_id=UCUyeluBRhGPCW4rPe_UvBZQ youtube
+https://www.youtube.com/feeds/videos.xml?channel_id=UCd3dNckv1Za2coSaHGHl5aA youtube
+https://www.youtube.com/feeds/videos.xml?channel_id=UC9-y-6csu5WGm29I7JiwpnA youtube
+
