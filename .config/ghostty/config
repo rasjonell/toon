@@ -1,0 +1,5 @@
+theme = GruvboxDark
+font-family = "MonoLisa Armen Regular"
+font-size=18
+background-opacity=0.95
+window-decoration=false
