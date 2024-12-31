@@ -14,11 +14,15 @@ Yabaii is a tilling window manager for MacOS (it's 🔥 blazingly 🔥 slow)
 
 ## [kitty](https://github.com/kovidgoyal/kitty)
 
-The best terminal emulator.
+The best terminal emulator. (started using ghostty on MacOs, seems fast and fine, but not much difference from kitty)
 
 ## [NeoVim (btw)](https://neovim.io/)
 
 I use NeoVim btw
+
+## [NewsBoat RSS Reader](https://newsboat.org/)
+
+NewsBoat is my rss reader.
 
 ## [fish](https://fishshell.com/)
 
