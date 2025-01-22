@@ -1,0 +1,26 @@
+# /home/rasjonell/.config/tmuxinator/hybr.yml
+
+name: hybr
+root: ~/Projects/hybr
+
+windows:
+  - Editor:
+      layout: main-vertical
+      panes:
+        - lvim .
+
+  - CLI:
+      layout: main-vertical
+      panes:
+        - go run hybr/cmd/cli
+
+
+  - Server:
+      layout: main-vertical
+      panes:
+        - go run hybr/cmd/server
+
+  - VPS:
+      layout: main-vertical
+      panes:
+        - TERM=linux ssh rasjonell@rasjonell.info
