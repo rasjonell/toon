@@ -1,0 +1,15 @@
+[pyprland]
+plugins = [
+  "magnify",
+  "layout_center",
+]
+
+[layout_center]
+margin = 60
+offset = [0, 30]
+next = "movefocus r"
+prev = "movefocus l"
+
+[magnify]
+factor = 2
+duration = 15
