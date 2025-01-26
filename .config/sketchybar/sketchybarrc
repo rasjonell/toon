@@ -27,24 +27,25 @@ default=(
   label.padding_right=5
   icon.color=0xffffffff
   label.color=0xffffffff
-  icon.font="JetBrainsMono Nerd Font:Bold:17.0"
-  label.font="JetBrainsMono Nerd Font:Bold:17.0"
+  icon.font="JetBrainsMono Nerd Font:ExtraBold:17.0"
+  label.font="JetBrainsMono Nerd Font:ExtraBold:17.0"
 )
 
 sketchybar --default "${default[@]}"
 
-mode=(
-  label="H"
+logo=(
+  label="Hybr"
   icon.drawing=off
-  background.height=20
+  background.height=40
   label.padding_right=6 
   label.color=0xffffffff
-  background.corner_radius=5
-  background.color=0xffff0000
+  background.corner_radius=0
+  background.color=0x7f000000
+  label.font="JetBrainsMono Nerd Font:ExtraBold:20.0"
 )
 
-sketchybar --add item mode left \
-    --set mode "${mode[@]}" 
+sketchybar --add item logo left \
+    --set logo "${logo[@]}" 
 
 sketchybar --add event aerospace_workspace_change
 for sid in $(aerospace list-workspaces --all); do
@@ -52,7 +53,7 @@ for sid in $(aerospace list-workspaces --all); do
         --subscribe space.$sid aerospace_workspace_change space_windows_change space_change \
         --set space.$sid \
         background.color=0xff8ec07c  \
-        background.corner_radius=5 \
+        background.corner_radius=0 \
         background.height=20 \
         background.drawing=off \
         icon.drawing=off \
@@ -68,7 +69,7 @@ sketchybar --add item chevron left \
     --subscribe front_app front_app_switched \
     --set front_app script="$PLUGIN_DIR/front_app.sh" \
     background.color=0xff8ec07c  \
-    background.corner_radius=5 \
+    background.corner_radius=0 \
     background.height=20 \
     background.drawing=on \
     icon.drawing=off \
@@ -85,7 +86,7 @@ media=(
   updates=on
 )
 
-sketchybar --add item media center \
+sketchybar --add item media right \
            --set media "${media[@]}" \
            --subscribe media media_change
 
