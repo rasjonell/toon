@@ -2,51 +2,25 @@
 
 > I'm running both MacOS and Void Linux machines, I try to store the most used/required configs here.
 
-## [hyprland](https://github.com/hyprwm/Hyprland)
+## Window Managers
+
+### Linux - [hyprland](https://github.com/hyprwm/Hyprland)
 
 Hyprland is a dynamic tiling Wayland compositor that also looks good.
 
 > I used to run [i3](https://github.com/i3/i3), but we moved on.
 
-## [yabaii](https://github.com/koekeishiya/yabai)
+## Mac Os - [yabaii](https://github.com/koekeishiya/yabai)
 
 Yabaii is a tilling window manager for MacOS (it's 🔥 blazingly 🔥 slow)
 
-## [kitty](https://github.com/kovidgoyal/kitty)
+> **_NOTE:_** I finally moved away from yabaii to aerospace(check out `./.aerospace.toml`)
 
-The best terminal emulator. (started using ghostty on MacOs, seems fast and fine, but not much difference from kitty)
+## [kitty](https://github.com/kovidgoyal/kitty) | [NeoVim (btw)](https://neovim.io/) | [fish](https://fishshell.com/)
 
-## [NeoVim (btw)](https://neovim.io/)
+The best terminal emulator. (started using ghostty on MacOs, seems fast and fine, but not much different from kitty)
 
 I use NeoVim btw
-
-## [NewsBoat RSS Reader](https://newsboat.org/)
-
-NewsBoat is my rss reader.
-
-## [fish](https://fishshell.com/)
-
-Fish is my go-to shell
-
-### [fisher](https://github.com/jorgebucaran/fisher)
-
-Fisher is a plugin manager for Fish. I've uploaded my plugins at `.fish_plugins`
-
-To install the plugins run:
-
-```fish
-for plugin in (cat .fish_plugins); fisher install $plugin; end
-```
-
-## [Homebrew](https://brew.sh/)
-
-I've uploaded my brew packages list at `.brew_packages`
-
-To install the packages run:
-
-```fish
-for package in (cat .brew_packages); brew install $package; end
-```
 
 ## [tmuxp](https://tmuxp.readthedocs.io/en/latest/) -> [tmuxinator](https://github.com/tmuxinator/tmuxinator)
 
@@ -54,6 +28,10 @@ Tmuxp is a [Tmux](https://github.com/tmux/tmux/wiki) session manager. you can sp
 Checkout my session configs at `tmuxp-sessions/`
 
 > **_NOTE:_** recently I moved to tmuxinator(check out `./.config/tmuxinator`)
+
+## [NewsBoat RSS Reader](https://newsboat.org/)
+
+NewsBoat is my rss reader.
 
 ## [zathura](https://github.com/pwmt/zathura)
 
