@@ -11,5 +11,5 @@ next = "movefocus r"
 prev = "movefocus l"
 
 [magnify]
-factor = 2
+factor = 5
 duration = 15
