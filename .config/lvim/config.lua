@@ -4,6 +4,13 @@ vim.wo.relativenumber = true
 lvim.format_on_save.enabled = true
 lvim.format_on_save.timeout = 2000
 
+vim.list_extend(lvim.lsp.automatic_configuration.skipped_servers, { "html" })
+
+local lspconfig = require('lspconfig')
+lspconfig.html.setup({
+  filetypes = { "html" }
+})
+
 local formatters = require "lvim.lsp.null-ls.formatters"
 formatters.setup {
   {
@@ -12,13 +19,8 @@ formatters.setup {
   }
 }
 
-
 local linters = require "lvim.lsp.null-ls.linters"
 linters.setup {
-  {
-    command = "revive",
-    filetypes = { "go" }
-  },
   {
     command = "eslint",
     filetypes = { "typescript", "typescriptreact" }
@@ -26,7 +28,19 @@ linters.setup {
 }
 
 lvim.plugins = {
-  "folke/tokyonight.nvim",
+  {
+    "folke/tokyonight.nvim",
+    lazy = false,
+    priority = 1000,
+    opts = {
+      style = "night",
+      transparent = true,
+      styles = {
+        floats = "transparent",
+        sidebars = "transparent",
+      },
+    }
+  },
   {
     "yetone/avante.nvim",
     lazy = false,
@@ -39,7 +53,7 @@ lvim.plugins = {
       vendors = {
         ollama = {
           api_key_name = "",
-          model = "mistral",
+          model = "deepseek-r1:14b",
           __inherited_from = "openai",
           endpoint = "http://127.0.0.1:11434/v1",
         },
@@ -54,26 +68,12 @@ lvim.plugins = {
     },
     build = "make",
     dependencies = {
-      "stevearc/dressing.nvim",
-      "nvim-lua/plenary.nvim",
-      "MunifTanjim/nui.nvim",
       "hrsh7th/nvim-cmp",
-      "nvim-tree/nvim-web-devicons",
+      "MunifTanjim/nui.nvim",
+      "nvim-lua/plenary.nvim",
+      "stevearc/dressing.nvim",
       "zbirenbaum/copilot.lua",
-      {
-        "HakonHarnes/img-clip.nvim",
-        event = "VeryLazy",
-        opts = {
-          default = {
-            prompt_for_file_name = false,
-            embed_image_as_base64 = false,
-            drag_and_drop = {
-              insert_mode = true,
-            },
-            use_absolute_path = true,
-          },
-        },
-      },
+      "nvim-tree/nvim-web-devicons",
       {
         'MeanderingProgrammer/render-markdown.nvim',
         opts = {
@@ -81,17 +81,29 @@ lvim.plugins = {
         },
         ft = { "markdown", "Avante" },
       },
+      {
+        "HakonHarnes/img-clip.nvim",
+        event = "VeryLazy",
+        opts = {
+          default = {
+            use_absolute_path = true,
+            prompt_for_file_name = false,
+            embed_image_as_base64 = false,
+            drag_and_drop = {
+              insert_mode = true,
+            },
+          },
+        },
+      },
     },
   }
 }
 
-
-lvim.colorscheme = "tokyonight"
+lvim.colorscheme = "tokyonight-night"
 
 lvim.meta = "ctrl"
 lvim.leader = "space"
 
-lvim.keys.normal_mode["<C-s>"] = ":w<CR>"
 lvim.keys.normal_mode["<S-l>"] = ":BufferLineCycleNext<CR>"
 lvim.keys.normal_mode["<S-h>"] = ":BufferLineCyclePrev<CR>"
 
@@ -99,12 +111,12 @@ lvim.builtin.alpha.active = true
 lvim.builtin.terminal.active = true
 lvim.builtin.alpha.mode = "dashboard"
 lvim.builtin.nvimtree.setup.view.side = "right"
-lvim.builtin.nvimtree.setup.renderer.icons.show.git = false
+lvim.builtin.nvimtree.setup.renderer.icons.show.git = true
 
 lvim.builtin.bufferline.active = true
 
-lvim.builtin.treesitter.ignore_install = { "haskell", "vimdoc" }
 lvim.builtin.treesitter.highlight.enable = true
+lvim.builtin.treesitter.ignore_install = { "haskell", "vimdoc" }
 lvim.builtin.treesitter.ensure_installed = {
   "go",
   "lua",
@@ -114,17 +126,9 @@ lvim.builtin.treesitter.ensure_installed = {
   "json",
   "rust",
   "yaml",
+  "templ",
   "javascript",
   "typescript",
 }
 
-require("tokyonight").setup({
-  style = "moon",
-  transparent = true,
-  styles = {
-    floats = "transparent",
-    sidebars = "transparent",
-  },
-})
-
-vim.cmd [[colorscheme tokyonight]]
+-- require('user.wheel')
